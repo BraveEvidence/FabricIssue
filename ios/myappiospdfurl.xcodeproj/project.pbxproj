@@ -14,6 +14,10 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-myappiospdfurl-myappiospdfurlTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-myappiospdfurl-myappiospdfurlTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		AB2E7B8029B8CB9D00457D01 /* RTNMyPdfDisplay.mm in Sources */ = {isa = PBXBuildFile; fileRef = AB2E7B7F29B8CB9D00457D01 /* RTNMyPdfDisplay.mm */; };
+		AB2E7B8229B8CC4A00457D01 /* RTNMyPdfDisplayManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = AB2E7B8129B8CC4A00457D01 /* RTNMyPdfDisplayManager.mm */; };
+		AB2E7B8629B8D09700457D01 /* PDFKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB2E7B8529B8D09700457D01 /* PDFKit.framework */; };
+		AB2E7B8829B8D33300457D01 /* sample.pdf in Resources */ = {isa = PBXBuildFile; fileRef = AB2E7B8729B8D33200457D01 /* sample.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +47,12 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-myappiospdfurl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-myappiospdfurl.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = myappiospdfurl/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-myappiospdfurl-myappiospdfurlTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myappiospdfurl-myappiospdfurlTests.release.xcconfig"; path = "Target Support Files/Pods-myappiospdfurl-myappiospdfurlTests/Pods-myappiospdfurl-myappiospdfurlTests.release.xcconfig"; sourceTree = "<group>"; };
+		AB2E7B7E29B8CB8E00457D01 /* RTNMyPdfDisplay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RTNMyPdfDisplay.h; sourceTree = "<group>"; };
+		AB2E7B7F29B8CB9D00457D01 /* RTNMyPdfDisplay.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RTNMyPdfDisplay.mm; sourceTree = "<group>"; };
+		AB2E7B8129B8CC4A00457D01 /* RTNMyPdfDisplayManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RTNMyPdfDisplayManager.mm; sourceTree = "<group>"; };
+		AB2E7B8329B8D03D00457D01 /* PDFKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk/System/iOSSupport/System/Library/Frameworks/PDFKit.framework; sourceTree = DEVELOPER_DIR; };
+		AB2E7B8529B8D09700457D01 /* PDFKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFKit.framework; path = System/Library/Frameworks/PDFKit.framework; sourceTree = SDKROOT; };
+		AB2E7B8729B8D33200457D01 /* sample.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = sample.pdf; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -59,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB2E7B8629B8D09700457D01 /* PDFKit.framework in Frameworks */,
 				0C80B921A6F3F58F76C31292 /* libPods-myappiospdfurl.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,10 +99,14 @@
 			children = (
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
+				AB2E7B8729B8D33200457D01 /* sample.pdf */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				AB2E7B7E29B8CB8E00457D01 /* RTNMyPdfDisplay.h */,
+				AB2E7B7F29B8CB9D00457D01 /* RTNMyPdfDisplay.mm */,
+				AB2E7B8129B8CC4A00457D01 /* RTNMyPdfDisplayManager.mm */,
 			);
 			name = myappiospdfurl;
 			sourceTree = "<group>";
@@ -99,6 +114,8 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AB2E7B8329B8D03D00457D01 /* PDFKit.framework */,
+				AB2E7B8529B8D09700457D01 /* PDFKit.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				5DCACB8F33CDC322A6C60F78 /* libPods-myappiospdfurl.a */,
 				19F6CBCC0A4E27FBF8BF4A61 /* libPods-myappiospdfurl-myappiospdfurlTests.a */,
@@ -244,6 +261,7 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				AB2E7B8829B8D33300457D01 /* sample.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +430,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB2E7B8229B8CC4A00457D01 /* RTNMyPdfDisplayManager.mm in Sources */,
+				AB2E7B8029B8CB9D00457D01 /* RTNMyPdfDisplay.mm in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
